@@ -10,7 +10,7 @@ public class Fungsi {
 
     public void type(String text) {
         undoStack.push(currentText.toString());
-        redoStack = new Stack<>();     // reset redo ketika ada pengetikan baru
+        redoStack = new Stack<>();
         currentText.append(text);
 
         fiturUndo = true;
@@ -24,7 +24,7 @@ public class Fungsi {
             currentText = new StringBuilder(undoStack.pop());
 
             fiturRedo = true;
-            fiturUndo = !undoStack.isEmpty(); // kalau kosong → disable undo
+            fiturUndo = !undoStack.isEmpty();
         } else {
             fiturUndo = false;
             System.out.println("Tidak ada yang bisa di-undo!");
