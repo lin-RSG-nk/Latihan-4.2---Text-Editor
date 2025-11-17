@@ -44,7 +44,7 @@ public class Fungsi {
         }
     }
 
-    public String getText() {
+    public String view() {
         return currentText.toString();
     }
 }
